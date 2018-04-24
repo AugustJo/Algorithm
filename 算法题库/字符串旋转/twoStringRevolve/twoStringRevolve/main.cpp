@@ -8,7 +8,6 @@
  *	"cdab",4,"abcd",4
  *	·µ»Ø£ºtrue
  */
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -60,7 +59,6 @@ public:
 		else return false;
 	}
 };
-
 
 int main() {
 	string A("cdab");
