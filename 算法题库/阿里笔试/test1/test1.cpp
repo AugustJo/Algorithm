@@ -11,35 +11,35 @@
 
 using namespace std;
 
-int main(){
-	int n;
-	cin >> n;
-	int res=1;
-	int countTree=0;
-	int relese=0;
-
-	if(n < 2)
-		cout<< 0;
-	else if(n < 4)
-		cout<< n-1;
-	else{
-		countTree = n/3;
-		relese = n%3;
-		if(relese==1){
-			countTree--;
-			relese = 4;
-		}
-		for(int i=0; i < countTree; i++){
-			res *=3;
-		}
-		if(relese != 0)
-			res *= relese;
-		cout << res;
-	}
-
-	system("pause");
-	return 0;
-}
+//int main(){
+//	int n;
+//	cin >> n;
+//	int res=1;
+//	int countTree=0;
+//	int relese=0;
+//
+//	if(n < 2)
+//		cout<< 0;
+//	else if(n < 4)
+//		cout<< n-1;
+//	else{
+//		countTree = n/3;
+//		relese = n%3;
+//		if(relese==1){
+//			countTree--;
+//			relese = 4;
+//		}
+//		for(int i=0; i < countTree; i++){
+//			res *=3;
+//		}
+//		if(relese != 0)
+//			res *= relese;
+//		cout << res;
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
 /*
 int main(){
 	int n;
