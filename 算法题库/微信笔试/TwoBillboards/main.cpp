@@ -54,8 +54,7 @@ n=4
 10 9 8 7
 
 */
-//#include "stdafx.h"
-#include <stdlib.h>
+/*
 #include <iostream>
 using namespace std;
 
@@ -132,6 +131,54 @@ int main()
 		}
 		cout << "\n";
 	}
+
+	system("pause");
+	return 0;
+}
+*/
+
+/*
+对于一棵满二叉排序树深度为K，节点数为 2^K - 1 ；节点值为 1至 (2^K-1)。
+给出K和任意三个节点的值，输出包含该三个节点的最小子树的根节点值
+样例输入：k=4  三个节点：10 15 13
+样例输出：12
+*/
+
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+
+int main()
+{
+	int k;
+	int nodeVal[3] = { 0 };
+
+	cout << "请输入四个数字" << endl;
+	cin >> k
+		>> nodeVal[0] >> nodeVal[1] >> nodeVal[2];
+
+	int Min = min(min(nodeVal[0], nodeVal[1]), nodeVal[2]);
+	int Max = max(max(nodeVal[0], nodeVal[1]), nodeVal[2]);
+	int left = 1;
+	int right = (int)pow(2, k) - 1;
+	int mid = (left + right) / 2;
+
+	while (left<right) {
+		if (Min<mid && Max>mid) {
+			break;
+		}
+		else if (Min>mid) {
+			left = mid + 1;
+			mid = (left + right) / 2;
+		}
+		else {
+			right = mid - 1;
+			mid = (left + mid) / 2;
+		}
+	}
+	cout << "所求最小树的根节点值为：" << mid << endl;
 
 	system("pause");
 	return 0;
