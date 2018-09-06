@@ -33,7 +33,7 @@ public:
 		a[i] = temp;
 
 		if (low < i) myQuickSort(a, low, i - 1);
-		if (i < high) myQuickSort(a, j + 1, high);
+		if (i < high) myQuickSort(a, i + 1, high);
 	}
 
 	int* quickSort(int* A, int n) {
