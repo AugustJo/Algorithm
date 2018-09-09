@@ -1,8 +1,7 @@
 /**
 * C++ гябд: ЖўВцВщевЪї
 *
-* @author skywang
-* @date 2013/11/07
+
 */
 
 #ifndef _BINARY_SEARCH_TREE_HPP_
